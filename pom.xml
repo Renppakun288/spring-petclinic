@@ -9,6 +9,7 @@
     <relativePath></relativePath>
   </parent>
 
+
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
   <packaging>war</packaging>
@@ -163,6 +164,19 @@
 
   <build>
     <plugins>
+	 <plugin>
+            <groupId>io.spring.javaformat</groupId>
+            <artifactId>spring-javaformat-maven-plugin</artifactId>
+            <version>0.0.43</version> <!-- You can use the latest version -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>apply</goal>
+                        <goal>validate</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
